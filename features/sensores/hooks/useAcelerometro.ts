@@ -1,5 +1,5 @@
 // ATENÇÃO: Instalar o pacote expo-sensors para acessar os sensores do dispositivo, incluindo o acelerômetro
-// usar: mpx expo install expo-sensors
+// usar: npx expo install expo-sensors
 import { Accelerometer } from "expo-sensors";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -16,6 +16,7 @@ export const useAcelerometro = (updateInterval = 100) => {
   //   evitando problemas de dependências em useEffect
   const unsubscribe = useCallback(() => {
     if (subscription.current) {
+      // verifica se está ligado o acelerômetro antes de tentar desligar
       subscription.current.remove();
       subscription.current = null;
       setIsListening(false);
