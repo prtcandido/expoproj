@@ -171,11 +171,4 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     textDecorationLine: "underline",
   },
-  // text: { fontSize: 16, marginBottom: 10, textAlign: "center", color: "#333" },
-  // textPermissionDenied: {
-  //   fontSize: 18,
-  //   color: "red",
-  //   marginBottom: 15,
-  //   fontWeight: "bold",
-  // },
 });
